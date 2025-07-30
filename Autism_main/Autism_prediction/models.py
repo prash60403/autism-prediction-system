@@ -1,3 +1,21 @@
 from django.db import models
 
-# Create your models here.
+class AutismScreening(models.Model):
+    A1_Score = models.IntegerField()
+    A2_Score = models.IntegerField()
+    A3_Score = models.IntegerField()
+    A4_Score = models.IntegerField()
+    A5_Score = models.IntegerField()
+    A6_Score = models.IntegerField()
+    A7_Score = models.IntegerField()
+    A8_Score = models.IntegerField()
+    A9_Score = models.IntegerField()
+    A10_Score = models.IntegerField()
+    age = models.FloatField()
+    jaundice = models.IntegerField()
+    gender = models.IntegerField()
+    ethnicity = models.IntegerField()
+    sum_score = models.IntegerField()
+    ind = models.IntegerField()
+    prediction = models.CharField(max_length=50)
+    timestamp = models.DateTimeField(auto_now_add=True)
