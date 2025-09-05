@@ -4,10 +4,87 @@
     <title>Autism Screening</title>
 </head>
 <body>
-    <h2>Autism Screening Form</h2>
+    <h2>Autism Screening Questionnaire</h2>
     <form method="POST">
         {% csrf_token %}
-        {{ form.as_p }}
+
+        <!-- Question 1 -->
+        <label>1. Does your child look at you when you call his/her name?</label><br>
+        <input type="radio" name="A1_Score" value="1"> Yes
+        <input type="radio" name="A1_Score" value="0"> No
+        <br><br>
+
+        <!-- Question 2 -->
+        <label>2. Does your child smile back at you?</label><br>
+        <input type="radio" name="A2_Score" value="1"> Yes
+        <input type="radio" name="A2_Score" value="0"> No
+        <br><br>
+
+        <!-- Question 3 -->
+        <label>3. Does your child respond to his/her name?</label><br>
+        <input type="radio" name="A3_Score" value="1"> Yes
+        <input type="radio" name="A3_Score" value="0"> No
+        <br><br>
+
+        <!-- Question 4 -->
+        <label>4. Does your child make eye contact?</label><br>
+        <input type="radio" name="A4_Score" value="1"> Yes
+        <input type="radio" name="A4_Score" value="0"> No
+        <br><br>
+
+        <!-- Question 5 -->
+        <label>5. Does your child enjoy playing peek-a-boo?</label><br>
+        <input type="radio" name="A5_Score" value="1"> Yes
+        <input type="radio" name="A5_Score" value="0"> No
+        <br><br>
+
+        <!-- Question 6 -->
+        <label>6. Does your child point to indicate interest?</label><br>
+        <input type="radio" name="A6_Score" value="1"> Yes
+        <input type="radio" name="A6_Score" value="0"> No
+        <br><br>
+
+        <!-- Question 7 -->
+        <label>7. Does your child imitate you?</label><br>
+        <input type="radio" name="A7_Score" value="1"> Yes
+        <input type="radio" name="A7_Score" value="0"> No
+        <br><br>
+
+        <!-- Question 8 -->
+        <label>8. Does your child show interest in other children?</label><br>
+        <input type="radio" name="A8_Score" value="1"> Yes
+        <input type="radio" name="A8_Score" value="0"> No
+        <br><br>
+
+        <!-- Question 9 -->
+        <label>9. Does your child bring objects to show you?</label><br>
+        <input type="radio" name="A9_Score" value="1"> Yes
+        <input type="radio" name="A9_Score" value="0"> No
+        <br><br>
+
+        <!-- Question 10 -->
+        <label>10. Does your child respond to social cues?</label><br>
+        <input type="radio" name="A10_Score" value="1"> Yes
+        <input type="radio" name="A10_Score" value="0"> No
+        <br><br>
+
+        <!-- Extra Fields -->
+        <label>11. Age:</label><br>
+        <input type="number" name="age" required><br><br>
+
+        <label>12. Has your child had jaundice?</label><br>
+        <input type="radio" name="jaundice" value="yes"> Yes
+        <input type="radio" name="jaundice" value="no"> No
+        <br><br>
+
+        <label>13. Gender:</label><br>
+        <input type="radio" name="gender" value="male"> Male
+        <input type="radio" name="gender" value="female"> Female
+        <br><br>
+
+        <label>14. Ethnicity (enter a number 0-20):</label><br>
+        <input type="number" name="ethnicity" min="0" max="20" required><br><br>
+
         <button type="submit">Predict</button>
     </form>
 </body>
